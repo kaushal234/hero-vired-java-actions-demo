@@ -23,7 +23,7 @@ jobs:
         run: java -version
 
       - name: Compile Java File
-        run: javac app.java
+        run: javac App.java
 
       - name: Run Java Application
         run: java app
