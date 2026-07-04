@@ -26,4 +26,4 @@ jobs:
         run: javac app.java
 
       - name: Run Java Application
-        run: java app.java
+        run: java app
