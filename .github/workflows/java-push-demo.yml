@@ -1,28 +1,29 @@
 name: Creating Java flow
 
 on:
-  push: 
-    branches: 
-      -main
+  push:
+    branches:
+      - main
 
 jobs:
   java-demo:
-    runs-on: macos-latest
-    steps:
-      - name: Checkout Repository
-      - uses: actions/checkout@v4
+    runs-on: ubuntu-latest
 
-      - name: Setup Java enviroment
-      - uses: actions/setup-java@v4
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Java Environment
+        uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-verion: '17'
+          distribution: temurin
+          java-version: '17'
+
       - name: Check Java Version
         run: java -version
 
-      - name: Compile java file
-        run: javac app.java
+      - name: Compile Java File
+        run: javac App.java
 
       - name: Run Java Application
-        run: java app.java
-    
+        run: java App
